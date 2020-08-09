@@ -1,0 +1,41 @@
+<section id="Inscricao" class="text-center section-padding">
+  <div class="col-12">
+    <div class="section-title-header text-center">
+      <a routerLink='/inscricao'>
+        <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s" id="inscricao">HighStakes</h1>
+      </a>
+      <p class="wow fadeInDown" data-wow-delay="0.2s">Tenha seus planos na palma da mão!</p>
+    </div>
+    <button class="btn btn-common   bg-gradient bt" type=" button" style="background-color: #f26627;"
+      data-toggle="collapse" data-target="#collapseInscricao" data-wow-delay="0.3s" aria-expanded="false"
+      aria-controls="collapseLogin">
+      Login
+    </button>
+    <button class="btn btn-common   bg-gradient bt" type=" button" style="background-color: #f26627;"
+      data-toggle="collapse" data-target="#collapseCadastro" data-wow-delay="0.3s" aria-expanded="false"
+      aria-controls="collapseCadastro">
+      Cadastro
+    </button>
+  </div>
+</section>
+<div class="collapse" id="collapseInscricao">
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="InputEmail">E-mail do usuário</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Inserir e-mail">
+        <small id="emailHelp" class="form-text text-muted"></small>
+      </div>
+      <div class="form-group">
+        <label for="InputPassword">Senha</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Insira a senha">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="Check">
+        <label class="form-check-label" for="exampleCheck1">Visualizar senha</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+  </div>
+</div>

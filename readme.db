@@ -1,0 +1,18 @@
+Aplicação Angular 9.14
+Formulário do cadastro( pagina - login):
+- Lógica feita com Typescript
+- Campos:
+   -   Nome Completo
+   -   E-mail/ Validação e-mail
+   -   Senha/ Validação Senha
+
+  #Foi instalado:
+    - RXJS >> https://www.learnrxjs.io/
+
+Formulário - Cadastros:
+
+Faremos as seguintes validações:
+- O nome deve ter mais do que 3 caracteres e menos do que 100
+- É preciso ser um e-mail no formato válido
+- A senha deverá ter no mínimo 8 caracteres.
+- A senha e a confirmação de senha devem ser exatamente iguais.

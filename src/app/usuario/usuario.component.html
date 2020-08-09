@@ -1,0 +1,66 @@
+<div class="collapse" id="collapseCadastro">
+  <div class="container">
+    <form class="form-horizontal" [formGroup]="formularioDeUsuario" (ngSubmit)="enviarDados()">
+      <div class="form-group">
+        <label for="nome">Nome Completo: </label>
+        <input type=" text" class="form-control" formControlName="nome" placeholder="Nome Completo">
+        <div *ngIf="!nome.pristine && nome.errors">
+          <p *ngIf="nome.errors.required">
+            Nome é obrigatório.
+          </p>
+          <p *ngIf="nome.errors.minlength">
+            Nome deve ter no mínimo 3 caracters.
+          </p>
+          <p *ngIf="nome.errors.maxlength">
+            Nome deve ter no máximo 100 caracters.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail: </label>
+        <input type="email" class="form-control" formControlName="email" placeholder="nome@email.com">
+        <div *ngIf="!email.pristine && email.errors">
+          <p *ngIf="email.errors.email">
+            Digite um e-mail válido.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha: </label>
+        <input type="password" class="form-control" formControlName="senha"
+          placeholder="senha com no mínimo 8 caractéres">
+        <div *ngIf="!senha.pristine && senha.errors">
+          <p *ngIf="senha.errors.required">
+            Senha é obrigatória.
+          </p>
+          <p *ngIf="senha.errors.minlength">
+            Senha deve ter no mínimo 6 caracters.
+          </p>
+          <p *ngIf="senha.errors.maxlength">
+            Senha deve ter no máximo 12 caracters.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmarSenha">Confirmar Senha: </label>
+        <input type="password" class="form-control" formControlName="confirmarSenha">
+        <div *ngIf="!confirmarSenha.pristine && confirmarSenha.errors">
+          <p *ngIf="confirmarSenha.errors.required">
+            Confirme sua senha.
+          </p>
+          <p *ngIf="confirmarSenha.errors.senhasNaoCoincidem">
+            As senhas não coincidem.
+          </p>
+        </div>
+      </div>
+
+      <br>
+      <div>
+        <button [disabled]="!formularioDeUsuario.valid" class="btn btn-primary">Finalizar cadastro!</button>
+      </div>
+    </form>
+  </div>
+</div>
